@@ -1,7 +1,8 @@
 <script>
   import Snake from "./Snake.svelte";
   import Food from "./Food.svelte";
-
+  let foodLeft = 20;
+  let foodTop = 300;
   function isCollide(a, b) {
     return !(
       a.top < b.top ||
@@ -45,6 +46,6 @@
 <h1>Snake Game</h1>
 <main>
   <Snake />
-  <Food />
+  <Food {foodLeft} {foodTop} />
 </main>
 <h2>Score</h2>

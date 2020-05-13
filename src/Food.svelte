@@ -1,13 +1,12 @@
 <script>
-
+  export let foodTop;
+  export let foodLeft;
 </script>
 
 <style>
   .food {
     width: 50px;
     height: 50px;
-    left: 200px;
-    top: 200px;
     position: absolute;
     border: solid black 1px;
     background-color: red;
@@ -16,4 +15,4 @@
   }
 </style>
 
-<div class="food" />
+<div class="food" style="left: {foodLeft}px; top: {foodTop}px" />
