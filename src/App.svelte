@@ -39,6 +39,13 @@
 
     return false;
   }
+
+  function onKeyDown(e) {
+    const newDirection = getDirectionFromKeyCode(e.keyCode);
+    if (newDirection) {
+      direction = newDirection;
+    }
+  }
 </script>
 
 <style>
@@ -59,7 +66,7 @@
 
 <h1>Snake Game</h1>
 <main>
-  <Snake {snakeBodies} />
+  <Snake {direction} {snakeBodies} />
   <Food {foodLeft} {foodTop} />
 </main>
 <h2>Score</h2>
