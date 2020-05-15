@@ -1,5 +1,8 @@
 <script>
-
+  export let top = 50;
+  export let left = 50;
+  export let isHead = false;
+  export let direction = "right";
 </script>
 
 <style>
@@ -10,8 +13,6 @@
     width: 48px;
     height: 48px;
     z-index: 3;
-    top: 0;
-    left: 0;
   }
   .eyes {
     position: absolute;
@@ -42,7 +43,9 @@
   }
 </style>
 
-<div class="snake-body right">
-  <div id="leftEye" class="eyes" />
-  <div id="rightEye" class="eyes" />
+<div style="left: {left}px; top: {top}px;" class="snake-body {direction}">
+  {#if isHead}
+    <div id="leftEye" class="eyes" />
+    <div id="rightEye" class="eyes" />
+  {/if}
 </div>
