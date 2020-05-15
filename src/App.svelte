@@ -3,6 +3,7 @@
   import Food from "./Food.svelte";
   let foodLeft = 20;
   let foodTop = 300;
+  let direction = "right";
   let snakeBodies = [
     {
       left: 100,
