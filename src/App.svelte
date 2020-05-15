@@ -11,7 +11,7 @@
     );
   }
 
-  function getDirectionFromKeyCode() {
+  function getDirectionFromKeyCode(keyCode) {
     if (keyCode === 38) {
       return "up";
     } else if (keyCode === 39) {
