@@ -3,6 +3,20 @@
   import Food from "./Food.svelte";
   let foodLeft = 20;
   let foodTop = 300;
+  let snakeBodies = [
+    {
+      left: 100,
+      top: 0
+    },
+    {
+      left: 50,
+      top: 0
+    },
+    {
+      left: 0,
+      top: 0
+    }
+  ];
   function isCollide(a, b) {
     return !(
       a.top < b.top ||
@@ -45,7 +59,7 @@
 
 <h1>Snake Game</h1>
 <main>
-  <Snake />
+  <Snake {snakeBodies} />
   <Food {foodLeft} {foodTop} />
 </main>
 <h2>Score</h2>
