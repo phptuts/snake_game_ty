@@ -18,6 +18,27 @@
       top: 0
     }
   ];
+
+  setInterval(() => {
+    snakeBodies.pop();
+
+    let { left, top } = snakeBodies[0];
+
+    if (direction === "up") {
+      top -= 50;
+    } else if (direction === "down") {
+      top += 50;
+    } else if (direction === "left") {
+      left -= 50;
+    } else if (direction === "right") {
+      left += 50;
+    }
+
+    const newHead = { left, top };
+
+    snakeBodies = [newHead, ...snakeBodies];
+  }, 200);
+
   function isCollide(a, b) {
     return !(
       a.top < b.top ||
@@ -71,3 +92,4 @@
   <Food {foodLeft} {foodTop} />
 </main>
 <h2>Score</h2>
+<svelte:window on:keydown={onKeyDown} />
