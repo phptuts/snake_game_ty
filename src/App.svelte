@@ -42,6 +42,10 @@
       moveFood();
       snakeBodies = [...snakeBodies, snakeBodies[snakeBodies.length - 1]];
     }
+
+    if (isGameOver()) {
+      alert("Game Over");
+    }
   }, 200);
 
   function isCollide(a, b) {
@@ -56,6 +60,26 @@
   function moveFood() {
     foodTop = Math.floor(Math.random() * 14) * 50;
     foodLeft = Math.floor(Math.random() * 20) * 50;
+  }
+
+  function isGameOver() {
+    const snakeBodiesNoHead = snakeBodies.slice(1);
+
+    const snakeCollisions = snakeBodiesNoHead.filter(sb =>
+      isCollide(sb, snakeBodies[0])
+    );
+
+    if (snakeCollisions.length > 0) {
+      return true;
+    }
+
+    const { top, left } = snakeBodies[0];
+
+    if (top >= 700 || top < 0 || left < 0 || left >= 1000) {
+      return true;
+    }
+
+    return false;
   }
 
   function getDirectionFromKeyCode(keyCode) {
