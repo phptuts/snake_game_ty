@@ -25,3 +25,5 @@ need to know a little bit of HTML, CSS, and Javascript.
 [Reactive Declarations](https://svelte.dev/examples#reactive-declarations)
 
 [Svelte Window](https://svelte.dev/examples#svelte-window)
+
+[Svelte Shorthand Props](https://svelte.dev/repl/72808c5cdce14fc6862e1661b68d8809?version=3.22.2)
