@@ -1,23 +1,10 @@
 <script>
   import Snake from "./Snake.svelte";
   import Food from "./Food.svelte";
-  let foodLeft = 50;
-  let foodTop = 300;
+  let foodLeft = 0;
+  let foodTop = 0;
   let direction = "right";
-  let snakeBodies = [
-    {
-      left: 100,
-      top: 0
-    },
-    {
-      left: 50,
-      top: 0
-    },
-    {
-      left: 0,
-      top: 0
-    }
-  ];
+  let snakeBodies = [];
 
   setInterval(() => {
     snakeBodies.pop();
@@ -44,7 +31,7 @@
     }
 
     if (isGameOver()) {
-      alert("Game Over");
+      resetGame();
     }
   }, 200);
 
@@ -60,6 +47,25 @@
   function moveFood() {
     foodTop = Math.floor(Math.random() * 14) * 50;
     foodLeft = Math.floor(Math.random() * 20) * 50;
+  }
+
+  function resetGame() {
+    moveFood();
+    direction = "right";
+    snakeBodies = [
+      {
+        left: 100,
+        top: 0
+      },
+      {
+        left: 50,
+        top: 0
+      },
+      {
+        left: 0,
+        top: 0
+      }
+    ];
   }
 
   function isGameOver() {
@@ -102,6 +108,8 @@
       direction = newDirection;
     }
   }
+
+  resetGame();
 </script>
 
 <style>
