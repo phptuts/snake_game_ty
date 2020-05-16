@@ -7,8 +7,8 @@
     background-color: green;
     border: black 1px solid;
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     z-index: 3;
     top: 0;
     left: 0;
