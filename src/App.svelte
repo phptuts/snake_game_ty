@@ -6,6 +6,8 @@
   let direction = "right";
   let snakeBodies = [];
 
+  $: score = snakeBodies.length - 3;
+
   setInterval(() => {
     snakeBodies.pop();
 
@@ -133,5 +135,5 @@
   <Snake {direction} {snakeBodies} />
   <Food {foodLeft} {foodTop} />
 </main>
-<h2>Score</h2>
+<h2>Score {score}</h2>
 <svelte:window on:keydown={onKeyDown} />
