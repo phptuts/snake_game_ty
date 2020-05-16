@@ -5,8 +5,8 @@
 
 <style>
   .food {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     position: absolute;
     border: solid black 1px;
     background-color: red;
