@@ -4,8 +4,8 @@
 
 <style>
   .food {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     left: 200px;
     top: 200px;
     position: absolute;
