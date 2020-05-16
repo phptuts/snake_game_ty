@@ -1,7 +1,7 @@
 <script>
   import Snake from "./Snake.svelte";
   import Food from "./Food.svelte";
-  let foodLeft = 20;
+  let foodLeft = 50;
   let foodTop = 300;
   let direction = "right";
   let snakeBodies = [
@@ -37,6 +37,11 @@
     const newHead = { left, top };
 
     snakeBodies = [newHead, ...snakeBodies];
+
+    if (isCollide(newHead, { left: foodLeft, top: foodTop })) {
+      moveFood();
+      snakeBodies = [...snakeBodies, snakeBodies[snakeBodies.length - 1]];
+    }
   }, 200);
 
   function isCollide(a, b) {
@@ -46,6 +51,11 @@
       a.left < b.left ||
       a.left > b.left
     );
+  }
+
+  function moveFood() {
+    foodTop = Math.floor(Math.random() * 14) * 50;
+    foodLeft = Math.floor(Math.random() * 20) * 50;
   }
 
   function getDirectionFromKeyCode(keyCode) {
