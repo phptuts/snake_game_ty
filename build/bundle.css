@@ -1,0 +1,5 @@
+main.svelte-1wfeo8w{width:1000px;height:700px;border:solid black 1px;position:relative;margin:20px auto;background-image:url("../background.jpg");background-size:cover}h2.svelte-1wfeo8w,h1.svelte-1wfeo8w{text-align:center}
+.food.svelte-p1ib6b{width:48px;height:48px;position:absolute;border:solid black 1px;background-color:red;border-radius:50%;z-index:0}
+.snake-body.svelte-1iorgmg{background-color:green;border:black 1px solid;position:absolute;width:48px;height:48px;z-index:3}.eyes.svelte-1iorgmg{position:absolute;background-color:orange;border-radius:50%;width:20%;height:20%}#leftEye.svelte-1iorgmg{left:70%;top:10%}#rightEye.svelte-1iorgmg{left:70%;bottom:10%}.snake-body.right.svelte-1iorgmg{transform:rotate(0deg)}.snake-body.left.svelte-1iorgmg{transform:rotate(180deg)}.snake-body.up.svelte-1iorgmg{transform:rotate(270deg)}.snake-body.down.svelte-1iorgmg{transform:rotate(90deg)}
+
+/*# sourceMappingURL=bundle.css.map */
