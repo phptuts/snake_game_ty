@@ -12,7 +12,7 @@ To build this game we used a javascript framework called
 [Svelte.js](https://svelte.dev/). In order to complete this tutorial you will
 need to know a little bit of HTML, CSS, and Javascript.
 
-## Example Links:
+## Example Links
 
 [Props](https://svelte.dev/examples#declaring-props)
 
